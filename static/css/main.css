@@ -60,14 +60,15 @@ a {
     margin: auto;
 }
 
-.review {
-
+.review > input {
+    width: 100px;
+    position: fixed;
 }
 
-.
 
-.review_button {
-    width: 100%;
+
+.review .review_button {
+    width: 100px;
     max-width: 100px;
     height: 80px;
     position: fixed;
