@@ -1,0 +1,107 @@
+/* common */
+
+body {
+    width: 100%;
+    height: 2000px;
+    margin: auto;
+}
+
+.wrap {
+    width: 1000px;
+    margin: auto;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+    display: block;
+}
+
+
+/* nav-bar */
+.nav-bar {
+    width: 100%;
+    max-width: 1000px;
+    background-color: orange;
+    position: fixed;
+    display: flex;
+    z-index:5;
+    top: 0;
+}
+
+.nav-bar .mainPage {
+    width: 50px;
+}
+
+.nav-bar .mainPage > img {
+    width: 100px;
+}
+
+.nav-bar .title {
+    position: relative;
+    margin: auto;
+    left: 0;
+    right: 0;
+}
+
+.nav-bar .main_menu {
+    display: flex;
+    position: absolute;
+    right: 10px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.nav-bar .main_menu > a {
+    top: 0;
+    bottom: 0;
+    position: relative;
+    margin: auto;
+}
+
+.review {
+
+}
+
+.
+
+.review_button {
+    width: 100%;
+    max-width: 100px;
+    height: 80px;
+    position: fixed;
+    bottom: 100px;
+    right : 10px;
+    margin-right : 50px;
+    background-color: greenyellow;
+    border : none;
+    border-radius: 50%;
+    cursor : pointer;
+}
+
+/*book review*/
+.book-review {
+    max-width: 1000px;
+    margin: 200px auto auto auto;
+    display : flex;
+    flex-wrap : wrap;
+    background-color: red;
+    justify-content: center;
+}
+
+.book-review .bestSeller {
+    width: 200px;
+    border : 1px solid #999;
+    margin-right: 30px;
+    margin-bottom: 20px;
+
+}
+
+.book-review .bestSeller .book_title {
+    text-align: center;
+}
+
+.book-review .bestSeller > img {
+    width: 200px;
+}
