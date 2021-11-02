@@ -19,9 +19,15 @@
           integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw=="
           crossorigin="anonymous" referrerpolicy="no-referrer"/>
 
+    <!--  jquery  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+            integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
     <!--  css & js -->
     <link rel="stylesheet" href="../static/css/main.css"/>
     <script defer src="../static/js/main.js"></script>
+
     <link rel="icon" href="../static/image/book_logo.png"/>
 
     <title>책리뷰</title>
@@ -39,17 +45,21 @@
         </div>
 
         <div class="main_menu">
-            <a class="sign_in" href="javascript:void(0)">sign in</a>
+            <a class="bestS" href="javascript:void(0)">베스트셀러</a>
+            <a class="prefer" href="javascript:void(0)">추천리스트</a>
+            <a class="sign_in" href="javascript:void(0)">로그인</a>
+            <a class="join_mem" href="javascript:void(0)">회원가입</a>
         </div>
 
 
     </div>
 
     <div class="review">
-        <input type="text" placeholder="책 제목을 입력해주세요." id="reviewTitle"/>
-        <input type="text" placeholder="책 내용, 저자, 발간일을 입력해주세요." id="reviewMemo"/>
+        <textarea type="text" placeholder="등록하고싶은 책의 리뷰를 작성해주세요." id="reviewMemo"></textarea>
+        <input type="text" placeholder="등록하고싶은 책의 url 주소를 입력하세요." id="reviewTitle"/>
+        <button class="upload_review">등록하기!</button>
     </div>
-    <button class="review_button" href="javascript:void(0)">책 등록</button>
+    <button class="review_button" href="javascript:void(0)">책 등록하기</button>
 
 
     <div class="book-review">
