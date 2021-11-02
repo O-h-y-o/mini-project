@@ -68,8 +68,9 @@ input, button, textarea {
 }
 
 .review {
-    width: 600px;
-    height: 650px;
+    width: 60%;
+    max-width: 800px;
+    height: 550px;
     position: fixed;
     border: 3px solid #6495EDFF;
     border-radius: 5px;
@@ -81,14 +82,14 @@ input, button, textarea {
     background-color: #fff;
 }
 
-.review #reviewTitle, .review #reviewMemo {
-    width: 500px;
+.review #reviewTitle, #reviewMemo, #reviewURL {
+    width: 80%;
     height: 50px;
     text-align: center;
     left:0;
     right:0;
     margin:20px auto;
-    opacity: 0;
+    opacity: 1;
     background-color: cornflowerblue;
     border: 0;
     transition: opacity .5s;
@@ -96,12 +97,17 @@ input, button, textarea {
 }
 
 .review #reviewMemo {
-    height: 500px;
+    height: 300px;
 }
 
 .review .upload_review {
     margin: auto;
     cursor: pointer;
+    background-color: cornflowerblue;
+    border: 0;
+    width: 150px;
+    height: 40px;
+    border-radius: 10%;
 }
 
 .hide {
@@ -129,6 +135,7 @@ input, button, textarea {
 
 /*book review*/
 .book-review {
+    width: 100%;
     max-width: 1000px;
     margin: 200px auto auto auto;
     display : flex;
@@ -138,16 +145,31 @@ input, button, textarea {
     z-index: 10;
 }
 
-.book-review .bestSeller {
-    width: 200px;
+.book-review .userSelect {
+    width: 20%;
     border : 1px solid #999;
     margin: 15px;
 }
 
-.book-review .bestSeller .book_title {
+.book-review .userSelect .book_title {
     text-align: center;
 }
 
-.book-review .bestSeller > img {
+.book-review .userSelect .book_img {
+    width: 139px;
+    height: 194px;
+}
+
+.book-review .userSelect .book_reviewTitle {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.book-review .userSelect > img {
     width: 200px;
+}
+
+.book-review #userReview {
+
 }
