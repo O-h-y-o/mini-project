@@ -1,11 +1,7 @@
-// $(document).ready(function () {
-//     reviews();
-// });
-
 $('.review_button').click(function () {
-    $('.review').toggleClass('hide');
-    $('#reviewMemo').toggleClass('show');
-    $('#reviewTitle').toggleClass('show');
+    $('.review').toggleClass('hide-out');
+    // $('#reviewMemo').toggleClass('show');
+    // $('#reviewTitle').toggleClass('show');
 });
 
 
@@ -25,3 +21,10 @@ $('.upload_review').click(function () {
 })
 
 
+$('.userSelect').click(function () {
+    $('#userSelect_click').toggleClass('hide-out');
+})
+
+$('.select_close').click(function () {
+    $('#userSelect_click').removeClass('hide-out');
+})

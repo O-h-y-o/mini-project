@@ -1,8 +1,20 @@
 /* common */
 body {
     width: 100%;
-    height: 2000px;
     margin: auto;
+}
+
+body::before {
+    content: '';
+    background-image: url("../image/bgimg2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: .5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
 }
 
 .wrap {
@@ -27,81 +39,121 @@ p {
 /* nav-bar */
 .nav-bar {
     width: 100%;
-    max-width: 1000px;
-    background-color: orange;
+    height: 70px;
+    /*max-width: 1000px;*/
+    background-color: cornflowerblue;
     position: fixed;
-    display: flex;
-    z-index:5;
+
+    z-index: 5;
     top: 0;
+    left: 0;
 }
 
-.nav-bar .mainPage {
+.nav-bar .center {
+    width: 1000px;
+    height: 70px;
+    display: flex;
+    margin:auto;
+    position: relative;
+}
+
+.nav-bar .center .mainPage {
     width: 50px;
 }
 
-.nav-bar .mainPage > img {
+.nav-bar .center .mainPage > img {
     width: 100px;
+    height: 100%;
 }
 
-.nav-bar .title {
-    position: relative;
+.nav-bar .center .title {
+    position: absolute;
     margin: auto;
-    left: 0;
-    right: 0;
-    font-size: 20px;
+    font-size: 40px;
     font-weight: bold;
+    top:12px;
+    left: 110px;
 }
 
-.nav-bar .main_menu {
+.nav-bar .center .title > a {
+    color: #eee;
+}
+
+.nav-bar .center .main_menu {
     display: flex;
     position: absolute;
     right: 10px;
     top: 0;
     bottom: 0;
-    margin: auto;
 }
 
-.nav-bar .main_menu > a {
-    top: 0;
-    bottom: 0;
+.nav-bar .center .main_menu > a {
+    margin: auto;
+    font-size: 15px;
+    color: #444;
+    padding:15px;
     position: relative;
-    margin: auto 10px;
-    font-size: 13px;
+}
+
+.nav-bar .center .main_menu > a::before {
+    content:'';
+    border-right:1px solid #444;
+    height: 15px;
+    position: absolute;
+    right:0;
+}
+
+.nav-bar .center .main_menu > a:last-child::before {
+    content:'';
+    border:0;
 }
 
 /* login form */
 .join-form {
     width: 500px;
-    height: 500px;
+    height: 600px;
     background-color: cornflowerblue;
     position: relative;
     top: 200px;
-    margin:auto;
+    margin: auto;
 }
 
-.join-form #id {
+.join-form .title {
+    display: block;
+    text-align: center;
+    padding: 30px 0 35px 0;
+    color: #fed;
+    font-size: 25px;
+    border-bottom: 1px solid #fed;
+}
+
+.join-form #wrongId, #wrongPw {
+    color: #fed;
+    text-align: center;
+    font-size: 15px;
 }
 
 .join-form input {
     display: block;
-    margin: auto;
-    width: 100%;
-    height: 40px;
+    margin: 35px auto auto auto;
+    width: 90%;
+    height: 60px;
     box-sizing: border-box;
-}
-
-
-.join-form #pw {
-
+    border-radius: 5px;
+    border: 1px solid #999999;
+    padding-left: 20px;
 }
 
 
 .join-form #join {
-    width: 300px;
-    margin : 30px auto;
+    width: 90%;
+    margin: 30px auto;
     height: 50px;
     background-color: yellowgreen;
-    border : 0;
+    border: 0;
     cursor: pointer;
-    color : #222;
+    color: #fff;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 30px;
 }

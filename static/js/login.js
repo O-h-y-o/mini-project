@@ -10,8 +10,8 @@ $('#login').click(function() {
         },
         success: function (response) {
             if (response['result'] == 'success') {
-                $.cookie('mytoken', response['token'], {path: '/login_main'});
-                window.location.replace("/login_main")
+                $.cookie('mytoken', response['token']);
+                window.location.replace('/main_page')
             } else {
                 alert(response['msg'])
             }

@@ -37,21 +37,22 @@
 <div class="wrap">
 
     <div class="nav-bar">
-        <a class="mainPage" href="/login_main">
-            <img src="../static/image/book_logo.png" alt="book_logo"/>
-        </a>
+        <div class="center">
+            <a class="mainPage" href="/main_page">
+                <img src="../static/image/book_logo.png" alt="book_logo"/>
+            </a>
 
-        <div class="title">
-            <a href="/login_main">모두의 책 리뷰</a>
+            <div class="title">
+                <a href="/main_page">모두의 책 리뷰</a>
+            </div>
+
+            <div class="main_menu">
+                <a class="bestS" href="/bestSeller">베스트셀러</a>
+                <a class="prefer" href="/main_page">추천리스트</a>
+                <a class="sign_in" href="javascript:void(0)">{{ user_id }}님 환영합니다.</a>
+                <a class="join_mem" href="/">로그아웃</a>
+            </div>
         </div>
-
-        <div class="main_menu">
-            <a class="bestS" href="javascript:void(0)">베스트셀러</a>
-            <a class="prefer" href="javascript:void(0)">추천리스트</a>
-            <a class="sign_in" href="javascript:void(0)">{{ id }} 님</a>
-            <a class="join_mem" href="/">로그아웃</a>
-        </div>
-
 
     </div>
 
@@ -64,20 +65,35 @@
     <button class="review_button" href="javascript:void(0)">책 등록하기</button>
 
     <div class="book-review">
-        {% for row in rows %}
-            {% set title = row['title'] %}
-            {% set image = row['image'] %}
-            {% set desc = row['desc'] %}
-            {% set url = row['url'] %}
-            {% set reviewMemo = row['reviewMemo'] %}
-            {% set reviewTitle = row['reviewTitle'] %}
-            <div class="userSelect">
-                <img class="book_img" src="{{ image }}"/>
-                <div class="book_title">{{ title }}</div>
-                <hr>
-                <div class="book_reviewTitle">{{ desc }}</div>
-            </div>
-        {% endfor %}
+        <div class="book-review-info">회원님들께서 직접 추천해주시는 책들입니다.<br>책에 대한 자세한 정보가 궁금하시다면 클릭!</div>
+        <div class="book-review-contents">
+
+            {% for row in rows %}
+                {% set id = row['id'] %}
+                {% set title = row['title'] %}
+                {% set image = row['image'] %}
+                {% set desc = row['desc'] %}
+                {% set url = row['url'] %}
+                {% set reviewMemo = row['reviewMemo'] %}
+                {% set reviewTitle = row['reviewTitle'] %}
+                <div class="userSelect">
+                    <img class="book_img" src="{{ image }}"/>
+                    <div class="book_title">{{ title }}</div>
+                    <hr>
+                    <div class="book_reviewTitle">{{ desc }}</div>
+
+                </div>
+                <div id="userSelect_click">
+                    <img class="book_img" src="{{ image }}"/>
+                    <textarea type="text" id="reviewMemo"></textarea>
+                    <input type="text" placeholder="등록하고싶은 책의 url 주소를 입력하세요." id="reviewURL"/>
+                    <button class="select_close">닫기</button>
+                </div>
+
+
+
+            {% endfor %}
+        </div>
     </div>
 </div>
 

@@ -37,36 +37,37 @@
 <div class="wrap">
     <!-- nav-bar -->
     <div class="nav-bar">
-        <a class="mainPage" href="/">
-            <img src="../static/image/book_logo.png" alt="book_logo"/>
-        </a>
+        <div class="center">
+            <a class="mainPage" href="/">
+                <img src="../static/image/book_logo.png" alt="book_logo"/>
+            </a>
 
-        <div class="title">
-            <a href="/">모두의 책 리뷰</a>
-        </div>
+            <div class="title">
+                <a href="/">모두의 책 리뷰</a>
+            </div>
 
-        <div class="main_menu">
-            <a class="bestS" href="javascript:void(0)">베스트셀러</a>
-            <a class="prefer" href="javascript:void(0)">추천리스트</a>
-            <a class="sign_in" href="/login">로그인</a>
-            <a class="join_mem" href="/joinMem">회원가입</a>
+            <div class="main_menu">
+                <a class="bestS" href="/bestSeller">베스트셀러</a>
+                <a class="prefer" href="/main_page">추천리스트</a>
+                <a class="sign_in" href="/login">로그인</a>
+                <a class="join_mem" href="/joinMem">회원가입</a>
+            </div>
         </div>
     </div>
 
     <div class="join-form">
+        <p class="title">모두의 책 리뷰에 오신 것을 환영합니다.</p>
         <div id="id">
-            <p>아이디</p>
-            <input type="text"/>
+            <input type="text" placeholder="아이디를 입력해주세요."/>
         </div>
+        <p id="wrongId"></p>
         <div id="pw">
-            <p>비밀번호</p>
-            <input type="password"/>
+            <input type="password" placeholder="비밀번호를 입력해주세요."/>
         </div>
-        <div id="e-mail">
-            <p>이메일</p>
-            <input type="text"/>
+        <div id="pw_again">
+            <input type="password" placeholder="비밀번호를 입력해주세요."/>
         </div>
-
+        <p id="wrongPw"></p>
         <a href="/login">
             <button id="join">회원가입</button>
         </a>
