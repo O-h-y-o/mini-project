@@ -26,8 +26,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
 
     <!--  css & js -->
-    <link rel="stylesheet" href="../static/css/main.css"/>
-    <script defer src="../static/js/main.js"></script>
+    <link rel="stylesheet" href="../static/css/joinMem.css"/>
+    <script defer src="../static/js/joinMem.js"></script>
 
     <link rel="icon" href="../static/image/book_logo.png"/>
 
@@ -35,66 +35,43 @@
 </head>
 <body>
 <div class="wrap">
-
+    <!-- nav-bar -->
     <div class="nav-bar">
         <div class="center">
             <a class="mainPage" href="/">
                 <img src="../static/image/book_logo.png" alt="book_logo"/>
             </a>
+
             <div class="title">
                 <a href="/">모두의 책 리뷰</a>
             </div>
+
             <div class="main_menu">
-                <a class="bestS" href="/javascript:void(0)">베스트셀러</a>
+                <a class="bestS" href="/bestSeller">베스트셀러</a>
                 <a class="prefer" href="/main_page">추천리스트</a>
                 <a class="sign_in" href="/login">로그인</a>
                 <a class="join_mem" href="/joinMem">회원가입</a>
             </div>
         </div>
-
     </div>
 
-    <div class="review">
-        <input type="text" placeholder="제목" id="reviewTitle"/>
-        <textarea type="text" placeholder="등록하고싶은 책의 리뷰를 작성해주세요." id="reviewMemo"></textarea>
-        <input type="text" placeholder="등록하고싶은 책의 url 주소를 입력하세요." id="reviewURL"/>
-        <button class="upload_review">등록하기!</button>
-    </div>
-    <button class="review_button" href="javascript:void(0)">책 등록하기</button>
-
-
-    <div class="book-review">
-        <div class="book-review-info">회원님들께서 직접 추천해주시는 책들입니다.<br>책에 대한 자세한 정보가 궁금하시다면 클릭!</div>
-        <div class="book-review-contents">
-
-            {% for row in rows %}
-                {% set id = row['id'] %}
-                {% set title = row['title'] %}
-                {% set image = row['image'] %}
-                {% set desc = row['desc'] %}
-                {% set url = row['url'] %}
-                {% set reviewMemo = row['reviewMemo'] %}
-                {% set reviewTitle = row['reviewTitle'] %}
-                <div class="userSelect">
-                    <img class="book_img" src="{{ image }}"/>
-                    <div class="book_title">{{ title }}</div>
-                    <hr>
-                    <div class="book_reviewTitle">{{ desc }}</div>
-
-                </div>
-                <div id="userSelect_click">
-                    <img class="book_img" src="{{ image }}"/>
-                    <textarea type="text" id="reviewMemo"></textarea>
-                    <input type="text" placeholder="등록하고싶은 책의 url 주소를 입력하세요." id="reviewURL"/>
-                    <button class="select_close">닫기</button>
-                </div>
-
-
-
-            {% endfor %}
+    <div class="join-form">
+        <p class="title">모두의 책 리뷰에 오신 것을 환영합니다.</p>
+        <div id="id">
+            <input type="text" placeholder="아이디를 입력해주세요."/>
         </div>
+        <p id="wrongId"></p>
+        <div id="pw">
+            <input type="password" placeholder="비밀번호를 입력해주세요."/>
+        </div>
+        <div id="pw_again">
+            <input type="password" placeholder="비밀번호를 입력해주세요."/>
+        </div>
+        <p id="wrongPw"></p>
+        <a href="/login">
+            <button id="join">회원가입</button>
+        </a>
     </div>
-</div>
 
 </body>
 </html>

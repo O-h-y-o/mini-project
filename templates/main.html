@@ -38,17 +38,19 @@
 
     <div class="nav-bar">
         <div class="center">
-            <a class="mainPage" href="/">
+            <a class="mainPage" href="/main_page">
                 <img src="../static/image/book_logo.png" alt="book_logo"/>
             </a>
+
             <div class="title">
-                <a href="/">모두의 책 리뷰</a>
+                <a href="/main_page">모두의 책 리뷰</a>
             </div>
+
             <div class="main_menu">
-                <a class="bestS" href="/javascript:void(0)">베스트셀러</a>
+                <a class="bestS" href="/bestSeller">베스트셀러</a>
                 <a class="prefer" href="/main_page">추천리스트</a>
-                <a class="sign_in" href="/login">로그인</a>
-                <a class="join_mem" href="/joinMem">회원가입</a>
+                <a class="sign_in" href="javascript:void(0)">{{ user_id }}님 환영합니다.</a>
+                <a class="join_mem" href="/">로그아웃</a>
             </div>
         </div>
 
@@ -61,7 +63,6 @@
         <button class="upload_review">등록하기!</button>
     </div>
     <button class="review_button" href="javascript:void(0)">책 등록하기</button>
-
 
     <div class="book-review">
         <div class="book-review-info">회원님들께서 직접 추천해주시는 책들입니다.<br>책에 대한 자세한 정보가 궁금하시다면 클릭!</div>
